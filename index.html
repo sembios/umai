@@ -36,7 +36,7 @@
 
     <script>
         function copyToClipboard() {
-            const text = "wget -q -O run.sh http://umai.kg/update/run.sh && sudo chmod +x run.sh && sudo ./run.sh";
+            const text = "wget -q -O run.sh https://sembios.github.io/umai/run.sh && sudo chmod +x run.sh && sudo ./run.sh";
             navigator.clipboard.writeText(text).then(() => {
                 document.getElementById('message').innerText = "Ссылка скопирована";
             }).catch(err => {
