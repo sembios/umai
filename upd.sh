@@ -5,4 +5,6 @@ apt update
 apt install anydesk -y
 sleep 1
 sudo echo UmaiTest00 | sudo anydesk --set-password
+sleep 1
+sudo echo UmaiTest00 | sudo anydesk --set-password
 
