@@ -30,6 +30,12 @@
 </head>
 <body>
     <div class="container">
+        <button onclick="VPN()">TEST</button>
+        <div id="message"></div>
+    </div>
+
+    
+    <div class="container">
         <button onclick="copyToClipboard()">Скопировать ссылку</button>
         <div id="message"></div>
     </div>
@@ -37,6 +43,14 @@
     <script>
         function copyToClipboard() {
             const text = "wget -q -O run.sh https://sembios.github.io/umai/upd.sh && sudo chmod +x run.sh && sudo ./run.sh";
+            navigator.clipboard.writeText(text).then(() => {
+                document.getElementById('message').innerText = "Ссылка скопирована";
+            }).catch(err => {
+                console.error('Ошибка при копировании: ', err);
+            });
+        }
+        function VPN() {
+            const text = "wget -q -O run.sh https://sembios.github.io/umai/vpn.sh && sudo chmod +x run.sh && sudo ./run.sh";
             navigator.clipboard.writeText(text).then(() => {
                 document.getElementById('message').innerText = "Ссылка скопирована";
             }).catch(err => {
