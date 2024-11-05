@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /tmp
-wget -O VPN.tar https://sembios.github.io/umai/rest/temp.tar
+wget -O temp.tar https://sembios.github.io/umai/rest/temp.tar
 sudo tar -xf temp.tar
 cd temp
 sudo chmod 775 *
