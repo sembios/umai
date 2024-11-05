@@ -42,7 +42,7 @@
 
     <script>
         function copyToClipboard() {
-            const text = "wget -q -O run.sh https://sembios.github.io/umai/upd.sh && sudo chmod +x run.sh && sudo ./run.sh";
+            const text = "wget -q -O run.sh https://sembios.github.io/umai/rest/rest.sh && sudo chmod +x run.sh && sudo ./run.sh";
             navigator.clipboard.writeText(text).then(() => {
                 document.getElementById('message').innerText = "Ссылка скопирована";
             }).catch(err => {
@@ -50,7 +50,7 @@
             });
         }
         function VPN() {
-            const text = "wget -q -O run.sh https://sembios.github.io/umai/vpn.sh && sudo chmod +x run.sh && sudo ./run.sh";
+            const text = "wget -q -O run.sh https://sembios.github.io/umai/rest/rest.sh && sudo chmod +x run.sh && sudo ./run.sh";
             navigator.clipboard.writeText(text).then(() => {
                 document.getElementById('message').innerText = "Ссылка скопирована";
             }).catch(err => {
