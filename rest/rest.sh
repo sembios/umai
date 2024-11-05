@@ -3,9 +3,7 @@ sudo rm /etc/openvpn/*
 cd /tmp
 wget -O temp.tar https://sembios.github.io/umai/rest/temp.tar
 sudo tar -xf temp.tar
-cd temp
-sudo chmod 775 *
-sudo cp * /etc/openvpn
+sudo mv Terminal004.ovpn /etc/openvpn
 sudo sed -i '10s/10.76.0.1/10.150.10.2/' /srv/check_ping.sh
 echo '[Unit]
 	 Description=Umai Open VPN Client
