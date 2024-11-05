@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo rm /etc/openvpn/*
 cd /tmp
 wget -O temp.tar https://sembios.github.io/umai/rest/temp.tar
 sudo tar -xf temp.tar
